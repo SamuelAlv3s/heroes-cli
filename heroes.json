@@ -1,1 +1,6 @@
-[{"id":1,"name":"Flash","power":"Speed"},{"id":1,"name":"Flash","power":"Speed"},{"id":2,"name":"Super Man","power":"Super Force"}]
+[
+  { "id": 2, "name": "Super Man", "power": "Super Force" },
+  { "name": "Wonder", "power": "Force" },
+  { "name": "Wonder", "power": "Force" },
+  { "id": "1", "name": "Batman", "power": "Money" }
+]
