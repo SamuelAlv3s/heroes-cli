@@ -21,4 +21,10 @@ describe("Heroes Suite", () => {
     const [actual] = await database.list(DEFAULT_ITEM.id);
     deepEqual(actual, expected);
   });
+
+  it("Should be remove an heroe by id", async () => {
+    const expected = true;
+    const result = await database.remove(DEFAULT_ITEM.id);
+    deepEqual(result, expected);
+  });
 });
