@@ -54,6 +54,26 @@ class Database {
 
     return await this.writeArchive(data);
   }
+
+  async update(id, modifications) {
+    const data = await this.getArchiveData();
+
+    const index = data.findIndex((item) => item.id === parseInt(id));
+
+    if (index === -1) {
+      throw Error("Heroe not exist");
+    }
+
+    const current = data[index];
+    const objectUpdated = {
+      ...current,
+      ...modifications,
+    };
+
+    data.splice(index, 1);
+
+    return await this.writeArchive([...data, objectUpdated]);
+  }
 }
 
 module.exports = new Database();
